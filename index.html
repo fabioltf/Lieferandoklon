@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/delivery.svg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <header class="flexContainer">
+        <div class="flexContainer flexItem">
+          <a href="./">
+            <img
+              id="deliveryLogo"
+              src="./images/icons/delivery-main.svg"
+              alt="logo"
+            />
+          </a>
+        </div>
+
+        <div class="flexContainer flexItem">
+          <span id="address">Berliner Str. 45, 13127 Berlin</span>
+        </div>
+
+        <div class="flexItem headerNavContainer flexContainer">
+          <img
+            id="flag"
+            class="flexContainer"
+            src="./images/icons/a-flag.svg"
+            alt="american flag"
+          />
+          <nav class="headerNav">
+            <ul class="flexContainerCol headerNavList">
+              <li>Bestellungen</li>
+              <li>Favoriten</li>
+              <li>Adressen</li>
+              <li>Punkte</li>
+              <li>Stempelkarten</li>
+              <li>Brauchst du Hilfe?</li>
+              <li>Geschenkkarten</li>
+              <li>Fahrer*in werden</li>
+              <li>Lieferando for business</li>
+              <li>Abmelden</li>
+              <img
+                id="burgerMenu"
+                src="./images/icons/burger-menu.svg"
+                alt="burger menu"
+              />
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="flexContainer">
+        <section id="mainSection">
+          <div id="mainRestaurantContent" class="flexContainerCol">
+            <div id="hero" class="flexContainerCol">
+              <img id="logo" src="./images/icons/logo.png" alt="logo" />
+            </div>
+
+            <div id="restaurantInfo" class="flexContainerCol flexItem">
+              <div id="restaurantTitle" class="flexContainer">
+                <h3>Holy Cow - Burger House</h3>
+              </div>
+              <div id="restaurantDelivery">
+                <span>Min. 20.00€</span> | <span>Delivery Cost 5.99€</span> |
+                <span>Free Delivery From 30€</span> |
+                <span>Reviews 4.8/5</span> | <span>About Us</span>
+              </div>
+              <div id="restaurantDishes">
+                <ul id="restaurantDishesCategories" class="flexContainer">
+                  <li><a href="#appetizersHeader">Appetizers</a></li>
+                  <li><a href="#burgersHeader">Burgers</a></li>
+                  <li><a href="#nuggetsHeader">Nuggets</a></li>
+                  <li><a href="#saladHeader">Salad</a></li>
+                  <li><a href="#beerHeader">Beer</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="restaurantDishesContainer" class="flexItem">
+              <div id="appetizersContainerMain">
+                <h3 id="appetizersHeader" class="dishHeaderCategories">
+                  Appetizers
+                </h3>
+                <div id="appetizersContainer" class="flexContainerCol"></div>
+              </div>
+              <div id="burgersContainerMain">
+                <h3 id="burgersHeader" class="dishHeaderCategories">Burgers</h3>
+                <div id="burgersContainer" class="flexContainerCol"></div>
+              </div>
+              <div id="nuggetsContainerMain">
+                <h3 id="nuggetsHeader" class="dishHeaderCategories">Nuggets</h3>
+                <div id="nuggetsContainer" class="flexContainerCol"></div>
+              </div>
+              <div id="saladContainerMain">
+                <h3 id="saladHeader" class="dishHeaderCategories">Salad</h3>
+                <div id="saladContainer" class="flexContainerCol"></div>
+              </div>
+              <div id="beerContainermain">
+                <h3 id="beerHeader" class="dishHeaderCategories">Beer</h3>
+                <div id="beerContainer" class="flexContainerCol"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside id="shoppingCard" class="">
+          <div id="closeContainer" class="flexContainer">
+            <img
+              id="closeIcon"
+              src="./images/icons/close.svg"
+              alt="close icon"
+            />
+          </div>
+          <div id="asideHeader">
+            <h3>Shopping Card</h3>
+          </div>
+          <div id="asideContent">
+            <h5>Fill your shopping card</h5>
+            <p>Add some delicious dishes from the menu and order your food.</p>
+          </div>
+
+          <div>
+            <div id="orderMinimumContainer" class="flexContainer">
+              <div><h6>Sum left for minimum order:</h6></div>
+
+              <div class="flexContainer">
+                <h6 id="orderMinimum">20.00</h6>
+                <h6>€</h6>
+              </div>
+            </div>
+
+            <div id="subTotalContainer" class="flexContainer">
+              <div><h5>Subtotal</h5></div>
+
+              <div class="flexContainer">
+                <h5 id="subTotal">0.00</h5>
+                <h5>€</h5>
+              </div>
+            </div>
+
+            <div id="deliveryContainer" class="flexContainer">
+              <div><h5 id="deliveryTitle">Delivery Costs</h5></div>
+
+              <div class="flexContainer">
+                <h5 id="deliveryCost">0.00</h5>
+                <h5>€</h5>
+              </div>
+            </div>
+
+            <div id="sum" class="flexContainer">
+              <div><h4 id="sumSpan">Total</h4></div>
+
+              <div class="sumInnerContainer flexContainer">
+                <h4 id="costSum">0.00</h4>
+                <h4>€</h4>
+              </div>
+            </div>
+          </div>
+
+          <div id="orderContainerBtn" class="flexContainer hide">
+            <button id="orderBtn" class="flexContainer">
+              <h3>Order For</h3>
+              <div id="orderTotalContainer" class="flexContainer">
+                <h3 id="orderTotalSum"></h3>
+                <h3>€</h3>
+              </div>
+            </button>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="footerFlex flexContainerCol">
+        <div id="toTopArrowContainer" class="hide flexContainer">
+          <div class="flexItem">
+            <img
+              src="./images/icons/to_top_arrow.svg"
+              alt="to top arrow"
+              id="toTopArrow"
+            />
+          </div>
+        </div>
+        <div class="flexItem footerNavContainer">
+          <nav class="footerNav">
+            <ul class="footerNavList">
+              <li>Ein Restaurant empfehlen</li>
+              <li>Ein Restaurant anmelden</li>
+              <li>Jobs</li>
+              <li>AGB</li>
+              <li>Datenschutzerklärung</li>
+              <li>Impressum</li>
+              <li>Verwendung von Cookies</li>
+              <li>Bug Bounty</li>
+              <li>Ethik-Hotline</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flexItem">
+          <span id="copyright">&copy;</span>
+        </div>
+
+        <div id="showShoppingCard" class="flexContainer">
+          <button id="showShoppingCardBtn"><h3>Shopping Card</h3></button>
+        </div>
+      </footer>
+    </div>
+    <script src="./menu.js"></script>
+    <script src="./template.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

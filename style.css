@@ -1,0 +1,1379 @@
+@font-face {
+  font-family: SegoeUI;
+  src: url(./fonts/SegoeUI.ttf) format("truetype");
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: "Harlow Solid";
+  src: url(./fonts/Harlow-Solid.ttf) format("truetype");
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: "Berlin Sans";
+  src: url(./fonts/Berlin-Sans.ttf) format("truetype");
+  font-weight: 400 700;
+}
+
+.boldSegoeUI {
+  font-family: SegoeUI, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  font-family: SegoeUI, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+li {
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.none {
+  display: none !important;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexContainerCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between !important;
+  color: #4b4b4b;
+  border-bottom: 1px solid #39bc39;
+  margin-bottom: 1px;
+}
+
+.headerNavList {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.headerNavList li {
+  display: none;
+}
+
+#deliveryLogo,
+#address,
+#flag,
+#burgerMenu {
+  cursor: pointer;
+}
+
+#hero {
+  width: 100%;
+  background-image: url(./images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+}
+
+#restaurantInfo {
+  text-align: center;
+}
+
+#restaurantTitle {
+  justify-content: space-around !important;
+}
+
+#restaurantDelivery {
+  color: #4b4b4b;
+}
+
+#restaurantDishesCategories {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#restaurantDishesCategories a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#restaurantDishesCategories a:hover {
+  text-decoration: underline;
+}
+
+#restaurantDishesContainer {
+  background-color: #f7fff7;
+  width: 100%;
+  text-align: left;
+}
+
+.dishInnerContainer {
+  border: 1px solid #4b4b4b;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.dishAddContainer {
+  justify-content: space-between;
+}
+
+.addMain {
+  cursor: pointer;
+}
+
+main {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+#shoppingCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+  overflow-y: scroll;
+  scrollbar-color: #39bc39 #f7fff7;
+  scrollbar-width: thin;
+}
+
+.deliveryContainer {
+  align-items: flex-start;
+}
+
+.orderContainer,
+.orderContainer2 {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.orderContainer3 {
+  width: 100%;
+}
+
+.subtractQuantity,
+.addQuantity,
+.canDelete {
+  cursor: pointer;
+}
+
+.counterQuantity {
+  border: 1px solid #4b4b4b;
+  border-radius: 12px;
+}
+
+.horizontalLine {
+  border-bottom: 1px solid #4b4b4b;
+  width: 100%;
+}
+
+#sum {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+#orderBtn {
+  color: #fff;
+  background-color: #39bc39;
+  border: 1px solid #39bc39;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+#orderBtn:hover {
+  background-color: #ff9100;
+  border: 1px solid #ff9100;
+}
+
+footer {
+  color: #4b4b4b;
+  background-color: #e5ffe5;
+}
+
+.footerNavList {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.footerNavList li:hover {
+  text-decoration: underline;
+}
+
+#toTopArrowContainer {
+  justify-content: flex-end;
+  position: fixed;
+}
+
+#toTopArrow {
+  cursor: pointer;
+}
+
+/* Breakpoint 1 - Mobile Phones */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  header {
+    height: 120px;
+    padding: 0 20px;
+    font-size: 16px;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    gap: 8px !important;
+  }
+
+  header div.flexItem {
+    width: 300px;
+  }
+
+  #deliveryLogo {
+    width: 160px;
+  }
+
+  #flag {
+    width: 22px;
+  }
+
+  #burgerMenu {
+    width: 26px;
+  }
+
+  #mainSection {
+    width: 100%;
+  }
+
+  #hero {
+    justify-content: flex-end;
+    height: 200px;
+  }
+
+  #logo {
+    /*width: 160px;*/
+    width: 80px;
+    top: 150px;
+  }
+
+  #restaurantInfo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  #restaurantDishesCategories {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    gap: 6px;
+  }
+
+  #restaurantDishesContainer {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .dishHeaderCategories {
+    margin: 20px 0;
+    text-indent: 9.5%;
+    text-shadow: 1.1px 1.1px #484848;
+    font-size: 16px;
+  }
+
+  .dishTitle {
+    font-size: 14px;
+  }
+
+  .dishDescription,
+  .dishIgredients,
+  .dishPrice {
+    font-size: 14px !important;
+  }
+
+  .addMain {
+    width: 22px;
+  }
+
+  .dishContainer {
+    width: 80%;
+  }
+
+  .dishInnerContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dishIgredients {
+    font-size: 16px;
+  }
+
+  #appetizersContainer,
+  #burgersContainer,
+  #nuggetsContainer,
+  #saladContainer,
+  #beerContainer {
+    gap: 20px;
+  }
+
+  #shoppingCard {
+    width: 100% !important;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    overflow-y: scroll;
+    scrollbar-color: #39bc39 #f7fff7;
+    scrollbar-width: thin;
+    display: none;
+  }
+
+  #closeContainer {
+    justify-content: flex-end;
+  }
+
+  #closeIcon {
+    width: 20px;
+    padding: 10px;
+  }
+
+  #asideContent p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .orderInnerContainer {
+    gap: 10px;
+  }
+
+  .orderContainer span {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    padding: 0 60px;
+  }
+
+  .subtractQuantity,
+  .addQuantity,
+  .canDelete {
+    width: 20px;
+  }
+
+  .horizontalLine {
+    margin: 10px 0;
+  }
+
+  .counterQuantity {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  #sum,
+  #subTotalContainer,
+  #deliveryContainer,
+  #orderMinimumContainer {
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  #orderContainerBtn h3 {
+    font-size: 12px;
+  }
+
+  #orderBtn {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  #orderTotalContainer {
+    gap: 4px;
+  }
+
+  #orderContainerBtn {
+    padding-bottom: 20px;
+  }
+
+  #orderMinimumContainer {
+    flex-direction: row;
+  }
+
+  #orderMinimumContainer h6 {
+    font-size: 10px;
+  }
+
+  footer {
+    height: 360px;
+    padding: 0 20px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .footerFlex {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .footerNavList {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px !important;
+  }
+
+  #toTopArrowContainer {
+    bottom: 80px;
+    right: 40px;
+  }
+
+  #toTopArrow {
+    width: 30px;
+  }
+
+  #showShoppingCard {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #4b4b4b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  #showShoppingCardBtn {
+    padding: 4px 12px;
+    color: #fff;
+    background-color: #39bc39;
+    border: 1px solid #39bc39;
+    border-radius: 12px;
+  }
+}
+
+/* Breakpoint 2 - Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  header {
+    height: 120px;
+    padding: 0 20px;
+    font-size: 16px;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    gap: 8px !important;
+  }
+
+  header div.flexItem {
+    width: 300px;
+  }
+
+  #deliveryLogo {
+    width: 160px;
+  }
+
+  #flag {
+    width: 22px;
+  }
+
+  #burgerMenu {
+    width: 26px;
+  }
+
+  #mainSection {
+    width: 100%;
+  }
+
+  #hero {
+    justify-content: flex-end;
+    height: 200px;
+  }
+
+  #logo {
+    /*width: 160px;*/
+    width: 80px;
+    top: 150px;
+  }
+
+  #restaurantInfo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  #restaurantDelivery {
+    font-size: 12px;
+  }
+
+  #restaurantDishesCategories {
+    gap: 20px;
+    padding: 0;
+  }
+
+  #restaurantDishesContainer {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .dishHeaderCategories {
+    margin: 20px 0;
+    text-indent: 9.5%;
+    text-shadow: 1.1px 1.1px #484848;
+    font-size: 16px;
+  }
+
+  .dishTitle {
+    font-size: 14px;
+  }
+
+  .dishDescription,
+  .dishIgredients,
+  .dishPrice {
+    font-size: 14px !important;
+  }
+
+  .addMain {
+    width: 22px;
+  }
+
+  .dishContainer {
+    width: 80%;
+  }
+
+  .dishInnerContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dishIgredients {
+    font-size: 16px;
+  }
+
+  #appetizersContainer,
+  #burgersContainer,
+  #nuggetsContainer,
+  #saladContainer,
+  #beerContainer {
+    gap: 20px;
+  }
+
+  #shoppingCard {
+    width: 100% !important;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    overflow-y: scroll;
+    scrollbar-color: #39bc39 #f7fff7;
+    scrollbar-width: thin;
+    display: none;
+  }
+
+  #closeContainer {
+    justify-content: flex-end;
+  }
+
+  #closeIcon {
+    width: 20px;
+    padding: 10px;
+  }
+
+  #asideContent p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .orderInnerContainer {
+    gap: 10px;
+  }
+
+  .orderContainer span {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    padding: 0 60px;
+  }
+
+  .subtractQuantity,
+  .addQuantity,
+  .canDelete {
+    width: 20px;
+  }
+
+  .horizontalLine {
+    margin: 10px 0;
+  }
+
+  .counterQuantity {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  #sum,
+  #subTotalContainer,
+  #deliveryContainer,
+  #orderMinimumContainer {
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  #orderContainerBtn h3 {
+    font-size: 12px;
+  }
+
+  #orderBtn {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  #orderTotalContainer {
+    gap: 4px;
+  }
+
+  #orderContainerBtn {
+    padding-bottom: 20px;
+  }
+
+  #orderMinimumContainer {
+    flex-direction: row;
+  }
+
+  #orderMinimumContainer h6 {
+    font-size: 10px;
+  }
+
+  footer {
+    height: 360px;
+    padding: 0 20px;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .footerFlex {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .footerNavList {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px !important;
+  }
+
+  #toTopArrowContainer {
+    bottom: 80px;
+    right: 40px;
+  }
+
+  #toTopArrow {
+    width: 30px;
+  }
+
+  #showShoppingCard {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #4b4b4b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  #showShoppingCardBtn {
+    padding: 4px 12px;
+    color: #fff;
+    background-color: #39bc39;
+    border: 1px solid #39bc39;
+    border-radius: 12px;
+  }
+}
+
+/* Breakpoint 3 - Tablets - Laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  header {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  header div.flexItem {
+    width: 300px;
+  }
+
+  #deliveryLogo {
+    width: 160px;
+  }
+
+  #flag {
+    width: 22px;
+  }
+
+  #burgerMenu {
+    width: 26px;
+  }
+
+  #mainSection {
+    width: 100%;
+  }
+
+  #hero {
+    justify-content: flex-end;
+    height: 500px;
+  }
+
+  #logo {
+    /*width: 160px;*/
+    width: 100px;
+    top: 440px;
+  }
+
+  #restaurantInfo {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  #restaurantDishesCategories {
+    gap: 20px;
+  }
+
+  #restaurantDishesContainer {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .dishHeaderCategories {
+    margin: 20px 0;
+    text-indent: 9.5%;
+    text-shadow: 1.1px 1.1px #484848;
+    font-size: 16px;
+  }
+
+  .dishTitle {
+    font-size: 14px;
+  }
+
+  .dishDescription,
+  .dishIgredients,
+  .dishPrice {
+    font-size: 14px !important;
+  }
+
+  .addMain {
+    width: 22px;
+  }
+
+  .dishContainer {
+    width: 90%;
+  }
+
+  .dishInnerContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dishIgredients {
+    font-size: 16px;
+  }
+
+  #appetizersContainer,
+  #burgersContainer,
+  #nuggetsContainer,
+  #saladContainer,
+  #beerContainer {
+    gap: 20px;
+  }
+
+  #shoppingCard {
+    width: 100% !important;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    overflow-y: scroll;
+    scrollbar-color: #39bc39 #f7fff7;
+    scrollbar-width: thin;
+    display: none;
+  }
+
+  #closeIcon {
+    width: 26px;
+  }
+
+  #closeContainer {
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+  #asideContent p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .orderInnerContainer {
+    gap: 10px;
+  }
+
+  .orderContainer span {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    padding: 0 10px;
+  }
+
+  .subtractQuantity,
+  .addQuantity,
+  .canDelete {
+    width: 20px;
+  }
+
+  .horizontalLine {
+    margin: 10px 0;
+  }
+
+  .counterQuantity {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  #sum,
+  #subTotalContainer,
+  #deliveryContainer,
+  #orderMinimumContainer {
+    justify-content: space-between;
+    padding: 0 200px;
+  }
+
+  #orderContainerBtn h3 {
+    font-size: 12px;
+  }
+
+  #orderBtn {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  #orderTotalContainer {
+    gap: 4px;
+  }
+
+  #orderContainerBtn {
+    padding-bottom: 20px;
+  }
+  #orderMinimumContainer {
+    flex-direction: column;
+  }
+
+  #orderMinimumContainer h6 {
+    font-size: 10px;
+  }
+
+  footer {
+    height: 160px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .footerFlex {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .footerNavList {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  #toTopArrowContainer {
+    bottom: 80px;
+    right: 40px;
+  }
+
+  #toTopArrow {
+    width: 30px;
+  }
+
+  #showShoppingCard {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #4b4b4b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+
+  #showShoppingCardBtn {
+    padding: 4px 12px;
+    color: #fff;
+    background-color: #39bc39;
+    border: 1px solid #39bc39;
+    border-radius: 12px;
+  }
+}
+
+/* Breakpoint 4 - Laptops - Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  header {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  header div.flexItem {
+    width: 300px;
+  }
+
+  #deliveryLogo {
+    width: 200px;
+  }
+
+  #flag {
+    width: 24px;
+  }
+
+  #burgerMenu {
+    width: 30px;
+  }
+
+  #mainSection {
+    width: calc(100% - 250px);
+  }
+
+  #hero {
+    justify-content: flex-end;
+    height: 500px;
+  }
+
+  #logo {
+    /*width: 160px;*/
+    width: 140px;
+    top: 420px;
+  }
+
+  #restaurantInfo {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  #restaurantDelivery {
+    font-size: 16px;
+  }
+
+  #restaurantDishesCategories {
+    gap: 20px;
+  }
+
+  #restaurantDishesContainer {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .dishHeaderCategories {
+    margin: 20px 0;
+    text-indent: 9.5%;
+    text-shadow: 1.1px 1.1px #484848;
+  }
+
+  .addMain {
+    width: 30px;
+  }
+
+  .dishContainer {
+    width: 80%;
+  }
+
+  .dishInnerContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dishIgredients {
+    font-size: 16px;
+  }
+
+  #appetizersContainer,
+  #burgersContainer,
+  #nuggetsContainer,
+  #saladContainer,
+  #beerContainer {
+    gap: 20px;
+  }
+
+  #shoppingCard {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: scroll;
+    scrollbar-color: #39bc39 #f7fff7;
+    scrollbar-width: thin;
+  }
+
+  #closeContainer {
+    display: none;
+  }
+
+  #asideContent p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .orderInnerContainer {
+    gap: 10px;
+  }
+
+  .orderContainer span {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    padding: 0 20px;
+  }
+
+  .subtractQuantity,
+  .addQuantity,
+  .canDelete {
+    width: 28px;
+  }
+
+  .horizontalLine {
+    margin: 10px 0;
+  }
+
+  .counterQuantity {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  #sum,
+  #subTotalContainer,
+  #deliveryContainer,
+  #orderMinimumContainer {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  #orderBtn {
+    gap: 10px;
+    padding: 12px 40px;
+  }
+
+  #orderTotalContainer {
+    gap: 4px;
+  }
+
+  #orderContainerBtn {
+    padding-bottom: 20px;
+  }
+
+  #orderMinimumContainer h6 {
+    font-size: 12px;
+  }
+
+  footer {
+    height: 140px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .footerFlex {
+    gap: 30px;
+  }
+
+  .footerNavList {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  #toTopArrowContainer {
+    bottom: 120px;
+    right: 264px;
+  }
+
+  #toTopArrow {
+    width: 40px;
+  }
+
+  #showShoppingCard {
+    display: none;
+  }
+}
+
+/* Breakpoint 5 - Desktops - TVs */
+@media screen and (min-width: 1201px) {
+  body {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  header {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  header div.flexItem {
+    width: 300px;
+  }
+
+  #deliveryLogo {
+    width: 200px;
+  }
+
+  #flag {
+    width: 24px;
+  }
+
+  #burgerMenu {
+    width: 30px;
+  }
+
+  #mainSection {
+    width: calc(100% - 350px);
+  }
+
+  #hero {
+    justify-content: flex-end;
+    height: 500px;
+  }
+
+  #logo {
+    /*width: 160px;*/
+    width: 140px;
+    top: 420px;
+  }
+
+  #restaurantInfo {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  #restaurantDelivery {
+    font-size: 16px;
+  }
+
+  #restaurantDishesCategories {
+    gap: 20px;
+  }
+
+  #restaurantDishesContainer {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .dishInnerContainer {
+    width: 50%;
+  }
+
+  .dishHeaderCategories {
+    margin: 20px 0;
+    text-indent: 9.5%;
+    text-shadow: 1.1px 1.1px #484848;
+  }
+
+  .addMain {
+    width: 30px;
+  }
+
+  .dishContainer {
+    width: 60%;
+  }
+
+  .dishInnerContainer {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .dishIgredients {
+    font-size: 16px;
+  }
+
+  #appetizersContainer,
+  #burgersContainer,
+  #nuggetsContainer,
+  #saladContainer,
+  #beerContainer {
+    gap: 20px;
+  }
+
+  #shoppingCard {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    overflow-y: scroll;
+    scrollbar-color: #39bc39 #f7fff7;
+    scrollbar-width: thin;
+  }
+
+  #closeContainer {
+    display: none;
+  }
+
+  #asideContent p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .orderInnerContainer {
+    gap: 10px;
+  }
+
+  .orderContainer span {
+    font-size: 16px;
+  }
+
+  .deliveryContainer {
+    padding: 0 20px;
+  }
+
+  .subtractQuantity,
+  .addQuantity,
+  .canDelete {
+    width: 28px;
+  }
+
+  .horizontalLine {
+    margin: 10px 0;
+  }
+
+  .counterQuantity {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  #sum,
+  #subTotalContainer,
+  #deliveryContainer,
+  #orderMinimumContainer {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  #orderBtn {
+    gap: 10px;
+    padding: 12px 40px;
+  }
+
+  #orderTotalContainer {
+    gap: 4px;
+  }
+
+  #orderContainerBtn {
+    padding-bottom: 20px;
+  }
+
+  footer {
+    height: 140px;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .footerFlex {
+    gap: 30px;
+  }
+
+  .footerNavList {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  #toTopArrowContainer {
+    bottom: 100px;
+    right: 380px;
+  }
+
+  #toTopArrow {
+    width: 40px;
+  }
+
+  #showShoppingCard {
+    display: none;
+  }
+}
